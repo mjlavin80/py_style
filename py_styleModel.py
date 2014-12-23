@@ -263,6 +263,7 @@ class Corpus(object):
             doc_values = tuple(doc_freqs)
             list_of_freq_tuples.append(doc_values)
         return list_of_freq_tuples
+    
     def top_words_from_corpus(self, num_words, test_name):
         corpus_tokens = []
         for i in self.corpus_vars["corpus_member_ids"]:
@@ -403,6 +404,7 @@ class Corpus(object):
         
         #text = remove_non_ascii_1(text)
         text = text.decode('unicode_escape').encode('ascii','ignore')
+        #text = text.decode('unicode_escape').encode('utf-8','ignore')
         
         #redefine text with apostrophes removed via function and all letters lowercased
         text = self.apostrophe_strip(text).lower()
