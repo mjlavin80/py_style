@@ -5,7 +5,7 @@ A Python command line tool leveraging NLTK, numpy, scipy, and matplotlib functio
 
 Installation
 ========
-I. Install Python 2.7.5
+I. Install lates Python 2 version (2.7.9 as of 12-23-14)
 
 II. Dependencies: Install or verify that the following libraries are installed
 
