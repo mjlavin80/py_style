@@ -5,7 +5,6 @@ from nltk import FreqDist
 import math
 import time
 import datetime
-from prettytable import PrettyTable
 
 # Menu classes
 class PrettyTableMaker(object):
