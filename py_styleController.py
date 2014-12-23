@@ -1,7 +1,6 @@
 import sys
 import sqlite3
 import py_styleView as view
-sys.path.append("/Users/agladwin/Documents/stylometry/testing")
 import py_styleModel as model
 from prettytable import PrettyTable
 import urllib
