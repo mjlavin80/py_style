@@ -576,7 +576,8 @@ class Library(object):
     def docs_from_db(self):
         #code to initialize objects for all documents in DB
         cursor = db.cursor()
-        c = cursor.execute('SELECT doc_id FROM metadata WHERE bootstrap!=1')
+        c = cursor.execute('SELECT doc_id FROM metadata')
+            #removed WHERE bootstrap=0 from query
         for i in c:
             name = "document_"+str(i[0])
             self.document_instances[name] = Document(i[0])
