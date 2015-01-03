@@ -567,7 +567,7 @@ class Library(object):
         self.docs_from_db()
         # instantiate all corpora
         self.corpora_from_db()
-        #self.bootstraps_from_db()
+        # self.bootstraps_from_db()
     
     def timestamp(self):
         ts = time.time()
@@ -576,7 +576,7 @@ class Library(object):
     def docs_from_db(self):
         #code to initialize objects for all documents in DB
         cursor = db.cursor()
-        c = cursor.execute('SELECT doc_id FROM metadata WHERE bootstrap=0')
+        c = cursor.execute('SELECT doc_id FROM metadata WHERE bootstrap!=1')
         for i in c:
             name = "document_"+str(i[0])
             self.document_instances[name] = Document(i[0])
